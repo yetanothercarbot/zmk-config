@@ -20,3 +20,6 @@
 ---
 board: adafruit_kb2040
 shield: ocreeb_12
+include:
+  - board: adafruit_kb2040
+    shield: ocreeb_12
