@@ -1,0 +1,6 @@
+if SHIELD_OCREEB_12
+
+config ZMK_KEYBOARD_NAME
+    default "ocreeb-12"
+
+endif # SHIELD_OCREEB_12
