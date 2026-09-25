@@ -1,3 +1,4 @@
+name: zmk-ocreeb-12
 build:
   settings:
     board_root: .
