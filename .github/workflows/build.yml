@@ -4,7 +4,6 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
-
-include:
-  - board: adafruit_kb2040//zmk
-    shield: ocreeb_12
+    include:
+      - board: adafruit_kb2040//zmk
+        shield: ocreeb_12
