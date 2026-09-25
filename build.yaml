@@ -19,5 +19,5 @@
 #
 ---
 include:
-  - board: adafruit_kb2040//zmk
+  - board: adafruit_kb2040
     shield: ocreeb_12
