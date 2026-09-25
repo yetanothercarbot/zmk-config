@@ -18,4 +18,5 @@ features:
   - encoder
 
 requires:
-  - adafruit_kb2040
+  # - adafruit_kb2040
+  - pro_micro
