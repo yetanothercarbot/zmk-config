@@ -18,6 +18,5 @@
 #     artifact-name: corne_left_with_studio
 #
 ---
-include:
-  - board: adafruit_kb2040//zmk
-    shield: ocreeb_12
+board: adafruit_kb2040
+shield: ocreeb_12
