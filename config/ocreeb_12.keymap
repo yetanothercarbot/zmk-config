@@ -13,12 +13,14 @@
         default_layer {
             // | A | B | C | D |
             // | E | F | G | H |
-            // | I | J | K | L |
+            // | I | J | K | 
             bindings = <
                 &kp A &kp B &kp C &kp D
                 &kp E &kp F &kp G &kp H
-                &kp I &kp J &kp K &kp L
+                &kp I &kp J &kp K &studio_unlock
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
     };
 };
