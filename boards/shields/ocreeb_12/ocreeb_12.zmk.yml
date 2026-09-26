@@ -16,6 +16,7 @@ features:
   - keys
   - underglow
   - encoder
+  - studio
 
 requires:
   # - adafruit_kb2040
