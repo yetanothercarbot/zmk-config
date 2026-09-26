@@ -11,16 +11,33 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // | A | B | C | D |
-            // | E | F | G | H |
-            // | I | J | K | 
             bindings = <
+                &kp C_MUTE &mo 1
                 &kp A &kp B &kp C &kp D
                 &kp E &kp F &kp G &kp H
-                &kp I &kp J &kp K &studio_unlock
+                &kp I &kp J &kp K &kp L
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &rgb_encoder>;
+        };
+
+        momentary {
+            bindings = <
+                &studio_unlock &trans
+                &none &none &none &bootloader
+                &none &none &none &none
+                &none &none &none &none
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &rgb_encoder>;
+        }
+    };
+
+    behaviors {
+        rgb_encoder: rgb_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&rgb_ug RGB_HUD>, <&rgb_ug RGB_HUI>;
         };
     };
 };
