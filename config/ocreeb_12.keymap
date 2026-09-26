@@ -24,9 +24,9 @@
 
         beamng {
             bindings = <
-                &trans &kp V       &kp N          &kp B
-                &trans &kp H       &kp LS(N)      &kp LA(LS(N))
-                &trans &kp COMMA   &kp KP_SLASH   &kp PERIOD
+                &trans &kp V       &kp LC(Q)   &kp B
+                &trans &kp H       &kp LS(N)   &kp LA(LS(N))
+                &trans &kp COMMA   &kp N       &kp PERIOD
                 &trans &trans
             >;
 
@@ -61,6 +61,15 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&rgb_ug RGB_HUD>, <&rgb_ug RGB_HUI>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+        combo_slash {
+            timeout-ms = <50>;
+            key-positions = <9 11>;
+            bindings = <&kp SLASH>;
         };
     };
 };
