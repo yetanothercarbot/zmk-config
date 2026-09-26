@@ -13,8 +13,8 @@
 
         default_layer {
             bindings = <
-                &to 3   &kp C_BRIGHTNESS_DEC   &kp C_BRIGHTNESS_INC   &kp K_LOCK
-                &to 2   &kp K_CUT              &kp K_COPY             &kp K_PASTE
+                &to 2   &kp C_BRIGHTNESS_DEC   &kp C_BRIGHTNESS_INC   &kp K_LOCK
+                &to 1   &kp K_CUT              &kp K_COPY             &kp K_PASTE
                 &to 0   &kp C_PREV             &kp C_PLAY_PAUSE       &kp C_NEXT
                 &kp C_MUTE &mo 3
             >;
