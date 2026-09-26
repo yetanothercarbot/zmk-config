@@ -12,6 +12,30 @@
         zmk,physical-layout = &physical_layout0;
         zmk,underglow = &led_strip;
     };
+
+    // Pin 18 is for encoder push
+    left_encoder: encoder_left {
+        compatible = "alps,ec11";
+        a-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <80>;
+        status = "enabled";
+    };
+
+    // D16 for encoder push
+    right_encoder: encoder_right {
+        compatible = "alps,ec11";
+        a-gpios = <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <80>;
+        status = "enabled";
+    };
+
+    sensors: sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder &right_encoder>;
+        triggers-per-rotation = <20>;
+    };
 };
 
 &pinctrl {
@@ -52,7 +76,8 @@
             spi-zero-frame = <0x40>;
             color-mapping = <LED_COLOR_ID_GREEN
                              LED_COLOR_ID_RED
-                             LED_COLOR_ID_BLUE>;
+                             LED_COLOR_ID_BLUE
+                             LED_COLOR_ID_WHITE>;
         };
     };
 };

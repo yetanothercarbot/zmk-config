@@ -21,3 +21,4 @@
 include:
   - board: adafruit_kb2040
     shield: ocreeb_12
+    snippet: studio-rpc-usb-uart
